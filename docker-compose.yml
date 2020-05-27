@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  chat:
+    image: thelounge/thelounge:latest
+    container_name: thelounge
+    restart: always
+    ports:
+      - 9000:9000/tcp
+    volumes:
+      - ./packages/chat:/var/opt/thelounge

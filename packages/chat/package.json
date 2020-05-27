@@ -1,0 +1,10 @@
+{
+	"name": "@tripsit/chat",
+	"private": true,
+  "version": "1.0.0",
+  "scripts": {
+		"start": "thelounge start"
+  },
+  "author": "SevenCats",
+  "license": "MIT"
+}
