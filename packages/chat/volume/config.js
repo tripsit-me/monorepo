@@ -16,7 +16,7 @@ module.exports = {
 	//   channels and scrollbacks are available when they come back.
 	//
 	// This value is set to `false` by default.
-	public: false,
+	public: true,
 
 	// ### `host`
 	//
@@ -100,7 +100,7 @@ module.exports = {
 	// Solarized would be `thelounge-theme-solarized`.
 	//
 	// This value is set to `"default"` by default.
-	theme: 'default',
+	theme: 'morning',
 
 	// ### `prefetch`
 	//
@@ -128,7 +128,7 @@ module.exports = {
 	// restarts.
 	//
 	// This value is set to `false` by default.
-	prefetchStorage: false,
+	prefetchStorage: true,
 
 	// ### `prefetchMaxImageSize`
 	//
@@ -171,7 +171,7 @@ module.exports = {
 	// Set `socket.io` transports.
 	//
 	// This value is set to `["polling", "websocket"]` by default.
-	transports: ['polling', 'websocket'],
+	transports: ['websocket', 'polling'],
 
 	// ### `leaveMessage`
 	//
@@ -180,7 +180,7 @@ module.exports = {
 	//
 	// This value is set to `"The Lounge - https://thelounge.chat"` by
 	// default.
-	leaveMessage: 'The Lounge - https://thelounge.chat',
+	leaveMessage: 'Stay safe!',
 
 	// ## Default network
 
@@ -226,16 +226,16 @@ module.exports = {
 	// }
 	// ```
 	defaults: {
-		name: 'Freenode',
-		host: 'chat.freenode.net',
+		name: 'TripSit',
+		host: 'irc.tripsit.me',
 		port: 6697,
 		password: '',
 		tls: true,
-		rejectUnauthorized: true,
-		nick: 'thelounge%%',
-		username: 'thelounge',
-		realname: 'The Lounge User',
-		join: '#thelounge',
+		rejectUnauthorized: false,
+		nick: 'Tripper%%%',
+		username: '',
+		realname: '',
+		join: '#welcome,#tripsit,#tripsit1,#sanctuary,#drugs,#lounge',
 	},
 
 	// ### `displayNetwork`
@@ -248,7 +248,7 @@ module.exports = {
 	// `lockNetwork` setting to restrict users from connecting to other networks.
 	//
 	// This value is set to `true` by default.
-	displayNetwork: true,
+	displayNetwork: false,
 
 	// ### `lockNetwork`
 	//
@@ -259,7 +259,7 @@ module.exports = {
 	// Lounge as a public web client for a specific IRC network.
 	//
 	// This value is set to `false` by default.
-	lockNetwork: false,
+	lockNetwork: true,
 
 	// ## User management
 
@@ -461,7 +461,7 @@ module.exports = {
 		// When set to true, this enables extra debugging output provided by
 		// [`irc-framework`](https://github.com/kiwiirc/irc-framework), the
 		// underlying IRC library for Node.js used by The Lounge.
-		ircFramework: false,
+		ircFramework: true,
 
 		// ### `debug.raw`
 		//
