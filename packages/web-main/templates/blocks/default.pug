@@ -1,0 +1,51 @@
+doctype html
+html(lang='en-ca')
+	head
+		meta(charset='utf-8')
+		meta(
+			name='viewport',
+			value='initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
+		)
+		title TripSit &bull; #{title}
+
+		link(rel='profile', href='http://gmpg.org/xfn/11')
+		link(
+			rel='alternate',
+			type='application/rss+xml',
+			title='TripSit &raquo; Feed',
+			href='https://tripsit.me/feed/',
+		)
+		link(
+			rel='alternate',
+			type='application/rss+xml',
+			title='TripSit &raquo; Comments Feed',
+			href='https://tripsit.me/comments/feed/',
+		)
+
+		link(rel='stylesheet', href='/styles.css')
+		script(src='/main.js', defer)
+		block head
+	body
+
+		header.main-header
+			h1 TripSit
+
+
+		aside.main-aside
+			h1 Social Sites
+			ul
+				li
+					a(href='https://reddit.com/r/tripsit', _target='blank') r/tripsit on Reddit
+				li
+					a(href='https://facebook.com/tripsitme', _target='blank') Facebook page
+				li
+					a(href='https://facebook.com/groups/tripsit', _target='blank') Facebook group
+				li
+					a(href='https://twitter.com/teamtripsit', _target='blank') @TEAMTRIPSIT on Twitter
+			h1 Archives
+			p TODO
+		main
+			block content
+
+		footer.main-footer
+			p Footer

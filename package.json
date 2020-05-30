@@ -2,12 +2,13 @@
   "name": "@tripsit/root",
   "private": true,
   "scripts": {
-		"start": "lerna run start",
-		"dev": "lerna run dev",
-		"clean": "lerna clean",
-		"lint": "eslint packages/**/*.js"
+    "start": "lerna run start",
+    "dev": "lerna run dev",
+    "clean": "lerna clean",
+    "lint": "eslint packages/**/*.js"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",

@@ -21,5 +21,11 @@ module.exports = {
 			env: { jest: true },
 			plugins: ['jest'],
 		},
+		{
+			files: ['packages/web-main/js/**/*.js'],
+			parser: 'babel-eslint',
+			parserOptions: { sourceType: 'module' },
+			rules: { strict: 0 },
+		},
 	],
 };

@@ -1,5 +1,17 @@
 version: '3.7'
 services:
+  web:
+    image: nginx:latest
+    container_name: tripsit_web
+    restart: always
+    ports:
+      - 8000:443/tcp
+      - 8080:80/tcp
+    volumes:
+      - ./web/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./web/nginx/proxy.conf:/etc/nginx/proxy.conf:ro
+      - ./web/nginx/sites:/etc/nginx/sites:ro
+      - ./packages/web-main/docroot:/usr/share/nginx/tripsit_web
   chat:
     image: thelounge/thelounge:latest
     container_name: tripsit_chat
@@ -7,5 +19,5 @@ services:
     ports:
       - 9000:9000/tcp
     volumes:
-      - ./packages/chat/volume:/var/opt/thelounge
-      - ./packages/chat/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
+      - ./packages/chat/volume:/var/opt/thelounge:ro
+      - ./packages/chat/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh:ro
