@@ -49,7 +49,7 @@ module.exports = {
 	// and will honor the `X-Forwarded-For` header.
 	//
 	// This value is set to `false` by default.
-	reverseProxy: false,
+	reverseProxy: true,
 
 	// ### `maxHistory`
 	//
