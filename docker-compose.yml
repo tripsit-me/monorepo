@@ -2,10 +2,9 @@ version: '3.8'
 services:
 
   web:
-    image: nginx:alpine
     container_name: tripsit_web
+    build: ./nginx
     restart: always
-    entrypoint: /usr/local/bin/docker-entrypoint.sh
     ports:
       - 8000:443/tcp
       - 8080:80/tcp
@@ -13,13 +12,12 @@ services:
       tripsit.local: 127.0.0.1
     volumes:
       - ./packages/web-main/docroot:/usr/share/nginx/tripsit_web
-      - ./docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh:ro
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/conf.d:/etc/nginx/conf.d
 
   chat:
-    image: thelounge/thelounge:latest
     container_name: tripsit_chat
+    build: ./packages/chat
     restart: always
     ports:
       - 9000:9000/tcp
@@ -27,4 +25,3 @@ services:
       tripsit.local: 127.0.0.1
     volumes:
       - ./packages/chat/volume:/var/opt/thelounge
-      - ./packages/chat/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh:ro
