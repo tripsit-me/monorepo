@@ -1,0 +1,49 @@
+mixin link(text, url, title = false, isBaseUrl = false)
+	-
+		const isCurrent = isBaseUrl
+			? new RegExp(`^${url}`).test(pageUrl)
+			: pageUrl === url;
+	a(href=url,
+		title=title,
+		aria-current=(isCurrent && 'page'),
+	) #{text}
+
+header.main-header
+	nav.main-nav(aria-label='Main Navigation')
+		h1
+			+link('TripSit', '/', 'Home Page')
+		ul
+			li
+				a(href='/chat', target='_blank') Chat &amp; Assistance
+			li
+				a(href='//combo.tripsit.me/', target='_blank') Drug Combinations
+			li
+				a(href='//drugs.tripsit.me/', target='_blank') Drug Factsheets
+			li
+				+link('Articles', '/articles', false, true)
+			li
+				a(
+					href='https://play.google.com/store/apps/details?id=me.tripsit.tripmobile',
+					title='TripSit Mobile App on Google Play',
+					target='_blank',
+				) Mobile App
+			li
+				+link('About', '/about')
+				ul
+					li
+						+link('Contact Us', '/contact-us')
+			li
+				h2 Social Media
+				ul
+					li
+						a(
+							href='https://reddit.com/r/tripsit',
+							title='TripSit Subreddit'
+							target='_blank',
+						) r/tripsit on Reddit
+					li
+						a(href='https://facebook.com/tripsitme', target='_blank') Facebook Page
+					li
+						a(href='https://facebook.com/groups/tripsit', target='_blank') Facebook Group
+					li
+						a(href='https://twitter.com/teamtripsit', target='_blank') Twitter

@@ -1,3 +1,4 @@
+block variables
 doctype html
 html(lang='en-ca')
 	head
@@ -27,27 +28,7 @@ html(lang='en-ca')
 		block head
 	body
 
-		header.main-header
-			h1 TripSit
-				nav.main-nav
-					ul
-						li
-							a(href='/about') About
-
-
-		aside.main-aside
-			h1 Social Sites
-			ul
-				li
-					a(href='https://reddit.com/r/tripsit', _target='blank') r/tripsit on Reddit
-				li
-					a(href='https://facebook.com/tripsitme', _target='blank') Facebook page
-				li
-					a(href='https://facebook.com/groups/tripsit', _target='blank') Facebook group
-				li
-					a(href='https://twitter.com/teamtripsit', _target='blank') @TEAMTRIPSIT on Twitter
-			h1 Archives
-			p TODO
+		include partials/main-header
 
 		main
 			block content

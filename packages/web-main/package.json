@@ -5,8 +5,8 @@
   "description": "Main TripSit website: https://tripsit.me",
   "scripts": {
     "build": "NODE_ENV=production npm run clean && concurrently \"npm run pug\" \"npm run sass:prod\" \"npm run js:prod\"",
-		"dev": "NODE_ENV=development npm run clean && concurrently \"npm run pug -- -w\" \"npm run sass:prod\" \"npm run js:dev\"",
-		"pug": "pug -o docroot templates/*.pug",
+    "dev": "NODE_ENV=development npm run clean && concurrently \"npm run pug -- -w\" \"npm run sass:prod\" \"npm run js:dev\"",
+    "pug": "pug -o docroot templates/*.pug",
     "sass:dev": "node-sass -w --source-map true styles/index.scss > docroot/styles.css",
     "sass:prod": "node-sass --out-style compressed --source-map true styles/index.scss > docroot/styles.css",
     "js:dev": "webpack --env=development",
@@ -22,6 +22,7 @@
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.2.0",
+    "jstransformer-markdown-it": "^2.1.0",
     "node-sass": "^4.14.1",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
