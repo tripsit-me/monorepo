@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production npm run clean && concurrently \"npm run pug\" \"npm run sass:prod\" \"npm run js:prod\"",
     "dev": "NODE_ENV=development npm run clean && concurrently \"npm run pug -- -w\" \"npm run sass:prod\" \"npm run js:dev\"",
-    "pug": "pug -o docroot templates/*.pug",
+    "pug": "node ./compile-templates.js",
     "sass:dev": "node-sass -w --source-map true styles/index.scss > docroot/styles.css",
     "sass:prod": "node-sass --out-style compressed --source-map true styles/index.scss > docroot/styles.css",
     "js:dev": "webpack --env=development",

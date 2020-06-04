@@ -1,5 +1,12 @@
 'use strict';
 
+const testFiles = [
+	'**/__tests__/*.spec.js',
+	'**/__mocks__/*.js',
+	'tests/**/*.spec.js',
+	'**/jest.setup.js',
+];
+
 module.exports = {
 	root: true,
 	extends: 'airbnb-base',
@@ -9,15 +16,22 @@ module.exports = {
 		strict: [2, 'global'],
 		indent: [2, 'tab'],
 		'no-tabs': 0,
+		'arrow-parens': [2, 'as-needed'],
 	},
 	overrides: [
 		{
 			files: [
-				'**/__tests__/*.spec.js',
-				'**/__mocks__/*.js',
-				'tests/**/*.spec.js',
-				'**/jest.setup.js',
-			],
+				'compile-templates.js',
+				'webpack.config.js',
+				'babel.config.js',
+			]
+				.concat(testFiles),
+			rules: {
+				'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+			},
+		},
+		{
+			files: testFiles,
 			env: { jest: true },
 			plugins: ['jest'],
 		},

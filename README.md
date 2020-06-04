@@ -1,1 +1,3 @@
-# TripSit
+# TripSit Monorepo
+
+
