@@ -1,0 +1,5 @@
+{
+	"host": "example.com",
+	"port": 6667,
+	"nick": "PsyBot-default-config"
+}

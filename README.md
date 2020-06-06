@@ -1,3 +1,3 @@
 # TripSit Monorepo
 
-Monorepo for TripSit. For instructions on running this repository check 
+Monorepo for TripSit. For instructions on running this repository check
