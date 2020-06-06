@@ -2,8 +2,8 @@
   "name": "@tripsit/root",
   "private": true,
   "scripts": {
-    "start": "WORKSPACE_ENV=production lerna run start",
-    "dev": "WORKSPACE_ENV=development lerna run dev",
+    "start": "WORKSPACE_ENV=production scripts/start.sh",
+    "dev": "WORKSPACE_ENV=development scripts/dev.sh",
     "clean": "lerna clean",
     "lint": "eslint packages/**/*.js",
     "up": "./scripts.up.sh"
