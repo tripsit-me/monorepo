@@ -3,5 +3,6 @@
 	"port": 6667,
 	"nick": "PsyBot-default-config",
 	"password": "P@ssw0rd",
-	"recoveryEmail": "psybot@example.com"
+	"recoveryEmail": "psybot@example.com",
+	"channels": ["#general", "#help"]
 }
