@@ -20,7 +20,7 @@ services:
     build: ./packages/psybot
     restart: always
     ports:
-      - 7600:7600/s
+      - 7600:7600
     volumes:
       - ./packages/psybot
 
