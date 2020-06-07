@@ -10,6 +10,7 @@ const testFiles = [
 module.exports = {
 	root: true,
 	extends: 'airbnb-base',
+	parser: 'babel-eslint',
 	parserOptions: { sourceType: 'script' },
 	env: { node: true },
 	rules: {

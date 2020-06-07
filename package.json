@@ -9,6 +9,8 @@
     "up": "./scripts.up.sh"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
     "babel-eslint": "^10.1.0",
     "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
