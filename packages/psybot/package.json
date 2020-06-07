@@ -1,0 +1,21 @@
+{
+  "name": "@tripsit/psybot",
+  "private": true,
+  "version": "0.1.0",
+  "description": "An IRC bot tailor made for irc.tripsit.me.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon --inspect index.js",
+    "test": "NODE_ENV=test jest"
+  },
+  "author": "SevenCats",
+  "license": "MIT",
+  "dependencies": {
+    "irc-framework": "^4.8.1"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4"
+  }
+}
