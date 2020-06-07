@@ -1,0 +1,1176 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   lernaVersion: '3.22.0',
+0 silly argv   '$0': 'node_modules/.bin/lerna',
+0 silly argv   script: 'dev'
+0 silly argv }
+1 notice cli v3.22.0
+2 verbose rootPath /Users/mpalmer/proj/tripsit
+3 info Executing command in 2 packages: "npm run dev"
+4 silly npmRunScript dev [] @tripsit/chat
+5 silly getExecOpts /Users/mpalmer/proj/tripsit/packages/chat undefined
+6 silly npmRunScript dev [] @tripsit/web-main
+7 silly getExecOpts /Users/mpalmer/proj/tripsit/packages/web-main undefined
+8 error Error: Command failed: npm run dev
+8 error ../src/backup.cc:78:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(backup->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:82:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         EMIT_EVENT(backup->handle(), 2, argv);
+8 error         ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:105:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(handle(), cb, 1, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:119:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             EMIT_EVENT(handle(), 2, info);
+8 error             ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:167:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(), Nan::New("filename").ToLocalChecked(), filename, ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:168:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(), Nan::New("sourceName").ToLocalChecked(), sourceName, ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:169:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(), Nan::New("destName").ToLocalChecked(), destName, ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:170:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(), Nan::New("filenameIsDest").ToLocalChecked(), filenameIsDest, ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:188:9: warning: unused variable 'status' [-Wunused-variable]
+8 error     int status = uv_queue_work(uv_default_loop(),
+8 error         ^
+8 error ../src/backup.cc:236:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(backup->handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:255:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     BACKUP_BEGIN(Step);
+8 error     ^
+8 error ../src/macros.h:154:9: note: expanded from macro 'BACKUP_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/backup.cc:301:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(backup->handle(), cb, 2, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/backup.cc:319:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     BACKUP_BEGIN(Finish);
+8 error     ^
+8 error ../src/macros.h:154:9: note: expanded from macro 'BACKUP_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/backup.cc:336:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(backup->handle(), cb, 0, NULL);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error 14 warnings generated.
+8 error ../src/database.cc:49:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(this->handle(), cb, 1, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:63:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             EMIT_EVENT(handle(), 2, info);
+8 error             ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:92:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:96:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             EMIT_EVENT(handle(), 2, argv);
+8 error             ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:133:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(), Nan::New("filename").ToLocalChecked(), info[0].As<String>(), ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:134:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(), Nan::New("mode").ToLocalChecked(), Nan::New(mode), ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:144:9: warning: unused variable 'status' [-Wunused-variable]
+8 error     int status = uv_queue_work(uv_default_loop(),
+8 error         ^
+8 error ../src/database.cc:190:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(db->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:194:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         EMIT_EVENT(db->handle(), 2, info);
+8 error         ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:199:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         EMIT_EVENT(db->handle(), 1, info);
+8 error         ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:230:9: warning: unused variable 'status' [-Wunused-variable]
+8 error     int status = uv_queue_work(uv_default_loop(),
+8 error         ^
+8 error ../src/database.cc:273:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(db->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:277:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         EMIT_EVENT(db->handle(), 2, info);
+8 error         ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:282:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         EMIT_EVENT(db->handle(), 1, info);
+8 error         ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:297:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(info.This(), callback, 0, NULL);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:314:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(info.This(), callback, 0, NULL);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:421:5: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error     EMIT_EVENT(db->handle(), 2, argv);
+8 error     ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:462:5: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error     EMIT_EVENT(db->handle(), 3, argv);
+8 error     ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:507:5: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error     EMIT_EVENT(db->handle(), 4, argv);
+8 error     ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:528:9: warning: unused variable 'status' [-Wunused-variable]
+8 error     int status = uv_queue_work(uv_default_loop(),
+8 error         ^
+8 error ../src/database.cc:564:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(db->handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:568:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             EMIT_EVENT(db->handle(), 2, info);
+8 error             ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:573:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(db->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:603:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(baton->db->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:628:9: warning: unused variable 'status' [-Wunused-variable]
+8 error     int status = uv_queue_work(uv_default_loop(),
+8 error         ^
+8 error ../src/database.cc:666:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(db->handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:670:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             EMIT_EVENT(db->handle(), 2, info);
+8 error             ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/database.cc:675:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(db->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error 28 warnings generated.
+8 error ../src/node_sqlite3.cc:23:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_READONLY, OPEN_READONLY);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:24:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_READWRITE, OPEN_READWRITE);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:25:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_CREATE, OPEN_CREATE);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:26:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_FULLMUTEX, OPEN_FULLMUTEX);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:27:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_URI, OPEN_URI);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:28:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_SHAREDCACHE, OPEN_SHAREDCACHE);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:29:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OPEN_PRIVATECACHE, OPEN_PRIVATECACHE);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:30:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_STRING(target, SQLITE_VERSION, VERSION);
+8 error     ^
+8 error ../src/macros.h:71:10: note: expanded from macro 'DEFINE_CONSTANT_STRING'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:32:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_STRING(target, SQLITE_SOURCE_ID, SOURCE_ID);
+8 error     ^
+8 error ../src/macros.h:71:10: note: expanded from macro 'DEFINE_CONSTANT_STRING'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:34:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_VERSION_NUMBER, VERSION_NUMBER);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:36:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_OK, OK);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:37:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_ERROR, ERROR);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:38:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_INTERNAL, INTERNAL);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:39:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_PERM, PERM);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:40:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_ABORT, ABORT);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:41:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_BUSY, BUSY);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:42:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_LOCKED, LOCKED);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:43:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_NOMEM, NOMEM);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:44:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_READONLY, READONLY);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:45:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_INTERRUPT, INTERRUPT);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:46:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_IOERR, IOERR);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:47:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_CORRUPT, CORRUPT);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:48:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_NOTFOUND, NOTFOUND);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:49:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_FULL, FULL);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:50:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_CANTOPEN, CANTOPEN);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:51:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_PROTOCOL, PROTOCOL);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:52:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_EMPTY, EMPTY);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:53:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_SCHEMA, SCHEMA);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:54:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_TOOBIG, TOOBIG);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:55:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_CONSTRAINT, CONSTRAINT);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:56:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_MISMATCH, MISMATCH);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:57:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_MISUSE, MISUSE);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:58:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_NOLFS, NOLFS);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:59:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_AUTH, AUTH);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:60:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_FORMAT, FORMAT);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:61:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_RANGE, RANGE);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/node_sqlite3.cc:62:5: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     DEFINE_CONSTANT_INTEGER(target, SQLITE_NOTADB, NOTADB);
+8 error     ^
+8 error ../src/macros.h:64:10: note: expanded from macro 'DEFINE_CONSTANT_INTEGER'
+8 error     Nan::ForceSet(target,                                                      \
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error 37 warnings generated.
+8 error ../src/statement.cc:74:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(stmt->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:78:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         EMIT_EVENT(stmt->handle(), 2, argv);
+8 error         ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:103:10: warning: 'ForceSet' is deprecated [-Wdeprecated-declarations]
+8 error     Nan::ForceSet(info.This(),Nan::New("sql").ToLocalChecked(), sql, ReadOnly);
+8 error          ^
+8 error ../../nan/nan_maybe_43_inl.h:117:1: note: 'ForceSet' has been explicitly marked deprecated here
+8 error NAN_DEPRECATED inline Maybe<bool> ForceSet(
+8 error ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:118:9: warning: unused variable 'status' [-Wunused-variable]
+8 error     int status = uv_queue_work(uv_default_loop(),
+8 error         ^
+8 error ../src/statement.cc:161:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(stmt->handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:322:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     STATEMENT_BEGIN(Bind);
+8 error     ^
+8 error ../src/macros.h:128:9: note: expanded from macro 'STATEMENT_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/statement.cc:347:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(stmt->handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:370:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     STATEMENT_BEGIN(Get);
+8 error     ^
+8 error ../src/macros.h:128:9: note: expanded from macro 'STATEMENT_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/statement.cc:412:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(stmt->handle(), cb, 2, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:416:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(stmt->handle(), cb, 1, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:438:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     STATEMENT_BEGIN(Run);
+8 error     ^
+8 error ../src/macros.h:128:9: note: expanded from macro 'STATEMENT_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/statement.cc:483:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(stmt->handle(), cb, 1, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:504:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     STATEMENT_BEGIN(All);
+8 error     ^
+8 error ../src/macros.h:128:9: note: expanded from macro 'STATEMENT_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/statement.cc:556:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(stmt->handle(), cb, 2, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:564:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(stmt->handle(), cb, 2, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:601:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     STATEMENT_BEGIN(Each);
+8 error     ^
+8 error ../src/macros.h:128:9: note: expanded from macro 'STATEMENT_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/statement.cc:680:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(async->stmt->handle(), cb, 2, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:694:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             TRY_CATCH_CALL(async->stmt->handle(), cb, 2, argv);
+8 error             ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:724:5: warning: unused variable 'status' [-Wunused-variable]
+8 error     STATEMENT_BEGIN(Reset);
+8 error     ^
+8 error ../src/macros.h:128:9: note: expanded from macro 'STATEMENT_BEGIN'
+8 error     int status = uv_queue_work(uv_default_loop(),                              \
+8 error         ^
+8 error ../src/statement.cc:743:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(stmt->handle(), cb, 1, argv);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:837:9: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error         TRY_CATCH_CALL(baton->stmt->handle(), cb, 0, NULL);
+8 error         ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:873:17: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error                 TRY_CATCH_CALL(handle(), cb, 1, argv);
+8 error                 ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error ../src/statement.cc:887:13: warning: 'MakeCallback' is deprecated [-Wdeprecated-declarations]
+8 error             EMIT_EVENT(handle(), 2, info);
+8 error             ^
+8 error ../src/macros.h:105:5: note: expanded from macro 'EMIT_EVENT'
+8 error     TRY_CATCH_CALL((obj),                                                      \
+8 error     ^
+8 error ../src/macros.h:112:10: note: expanded from macro 'TRY_CATCH_CALL'
+8 error     Nan::MakeCallback((context), (callback), (argc), (argv))
+8 error          ^
+8 error ../../nan/nan.h:1026:3: note: 'MakeCallback' has been explicitly marked deprecated here
+8 error   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+8 error   ^
+8 error ../../nan/nan.h:106:40: note: expanded from macro 'NAN_DEPRECATED'
+8 error # define NAN_DEPRECATED __attribute__((deprecated))
+8 error                                        ^
+8 error 23 warnings generated.
+8 error
+8 error > @tripsit/chat@1.0.0 dev /Users/mpalmer/proj/tripsit/packages/chat
+8 error > npx thelounge start
+8 error
+8 error 2020-06-04 12:48:27 [INFO] The Lounge v4.1.0 (Node.js 14.3.0 on darwin x64)
+8 error 2020-06-04 12:48:27 [INFO] Configuration file: /Users/mpalmer/.thelounge/config.js
+8 error 2020-06-04 12:48:27 [INFO] Available at http://[::]:9000/ in private mode
+8 error 2020-06-04 12:48:27 [INFO] New VAPID key pair has been generated for use with push subscription.
+8 error 2020-06-04 12:48:27 [INFO] There are currently no users. Create one with thelounge add <name>.
+8 error
+8 error     at makeError (/Users/mpalmer/proj/tripsit/node_modules/execa/index.js:174:9)
+8 error     at /Users/mpalmer/proj/tripsit/node_modules/execa/index.js:278:16

@@ -1,0 +1,8 @@
+{
+	"host": "itc.tripsit.me",
+	"port": 6665,
+	"nick": "tripbotv2-dev",
+	"password": "ayyoayyoayyyy",
+	"recoveryEmail": "snowcolton@hotmail.com",
+	"channels": ["#drugs", "#stims"]
+}
