@@ -2,6 +2,7 @@
 
 const { Client } = require('irc-framework');
 const middleware = require('./middleware');
+const commands = require('./commands');
 
 module.exports = function createPsybot(config) {
 	const client = new Client({ encoding: 'utf8' });
@@ -16,6 +17,19 @@ module.exports = function createPsybot(config) {
 				channel.join();
 				channel.updateUsers();
 			});
+	});
+
+	client.on('message', event => {
+		if (!event.message.trim().startsWith('!')) return null;
+		const [commandName, ...args] = event.message
+			.trim()
+			.slice(1)
+			.split(/\s+/g);
+
+		const command = commands[commandName];
+		return command
+			? command({ event }, ...args)
+			: event.reply(`There is no command by '${commandName}'`);
 	});
 
 	client.connect({
