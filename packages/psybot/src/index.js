@@ -4,6 +4,8 @@ const { Client } = require('irc-framework');
 const middleware = require('./middleware');
 const commands = require('./commands');
 
+const PRIVATE_ONLY_COMMANDS = ['dose'];
+
 module.exports = function createPsybot(config) {
 	const client = new Client({ encoding: 'utf8' });
 
@@ -26,6 +28,9 @@ module.exports = function createPsybot(config) {
 			.slice(1)
 			.split(/\s+/g);
 
+		if (PRIVATE_ONLY_COMMANDS.includes(commandName)) {
+			return event.reply(`'${commandName}' can only be used through private messages.`);
+		}
 		const command = commands[commandName];
 		return command
 			? command({ event }, ...args)

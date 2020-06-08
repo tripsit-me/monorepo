@@ -3,6 +3,7 @@
 const { Client } = require('irc-framework');
 const createPsybot = require('..');
 const middleware = require('../middleware');
+const commands = require('../commands');
 
 jest.mock('irc-framework', () => {
 	class MockClient {}
@@ -19,6 +20,11 @@ jest.mock('irc-framework', () => {
 jest.mock('../middleware', () => ({
 	debug: jest.fn(),
 	nickserv: jest.fn(),
+}));
+
+jest.mock('../commands', () => ({
+	ping: jest.fn(),
+	dose: jest.fn(),
 }));
 
 beforeEach(() => {
@@ -64,4 +70,55 @@ test('Joins all channels defined in configuration', () => {
 	registeredHandler();
 	expect(Client.prototype.channel).toHaveBeenCalledTimes(3);
 	expect(Client.prototype.channel.mock.calls).toEqual([['#foo'], ['#bar'], ['#baz']]);
+});
+
+describe('message handler', () => {
+	test('Successful command execution', () => {
+		const client = createPsybot({
+			host: 'mockHost',
+			port: 1337,
+			nick: 'RadMan1337',
+			channels: ['#foo', '#bar', '#baz'],
+		});
+		const messageHandler = client.on.mock.calls[1][1];
+
+		const event = {
+			reply: jest.fn(),
+			message: '!ping a b',
+		};
+		messageHandler(event);
+
+		expect(event.reply).not.toHaveBeenCalled();
+		expect(commands.ping).toHaveBeenCalledWith({ event }, 'a', 'b');
+	});
+
+	test('Private message only commands message', () => {
+		const client = createPsybot({
+			host: 'mockHost',
+			port: 1337,
+			nick: 'RadMan1337',
+			channels: ['#foo', '#bar', '#baz'],
+		});
+		const messageHandler = client.on.mock.calls[1][1];
+
+		const reply = jest.fn();
+		messageHandler({ reply, message: '!dose cool stuff' });
+
+		expect(reply).toHaveBeenCalledWith('\'dose\' can only be used through private messages.');
+	});
+
+	test('Reply for when command does not exist', () => {
+		const client = createPsybot({
+			host: 'mockHost',
+			port: 1337,
+			nick: 'RadMan1337',
+			channels: ['#foo', '#bar', '#baz'],
+		});
+		const messageHandler = client.on.mock.calls[1][1];
+
+		const reply = jest.fn();
+		messageHandler({ reply, message: '!swag my tv' });
+
+		expect(reply).toHaveBeenCalledWith('There is no command by \'swag\'');
+	});
 });
