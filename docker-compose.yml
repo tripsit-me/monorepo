@@ -1,6 +1,17 @@
 version: '3.8'
 services:
 
+  # database:
+  #   image: postgres:13-alpine
+  #   container_name: tripsit_database
+  #   restart: always
+  #   env_file: .env
+  #   ports:
+  #     - 5630:5432
+  #   volumes:
+  #     - tripsit_data:/var/lib/postgresql/data
+  #     - tripsit_data:/docker-entrypoint-initdb.d
+
   web:
     container_name: tripsit_web
     build: ./nginx
@@ -19,10 +30,8 @@ services:
     container_name: tripsit_psybot
     build: ./packages/psybot
     restart: always
-    ports:
-      - 7600:7600
-    volumes:
-      - ./packages/psybot
+    # volumes:
+    #   - ./packages/psybot
 
   chat:
     container_name: tripsit_chat
@@ -34,3 +43,8 @@ services:
       tripsit.local: 127.0.0.1
     volumes:
       - ./packages/chat/volume:/var/opt/thelounge
+
+# volumes:
+#   tripsit_data:
+#     name: tripsit_data
+#     driver: local
