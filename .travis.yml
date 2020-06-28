@@ -1,0 +1,5 @@
+lanugage: node_js
+node_js:
+before_install:
+  - npm -g i npm@6.14.5
+cache: npm

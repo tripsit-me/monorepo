@@ -1,4 +1,4 @@
-#!/usr/bin/env basn
+#!/usr/bin/env bash
 
 function docker_clean {
 	echo "Removing docker containers and volumes..."
