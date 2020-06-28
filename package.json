@@ -4,7 +4,7 @@
   "scripts": {
     "start": "WORKSPACE_ENV=production scripts/start.sh",
     "dev": "WORKSPACE_ENV=development scripts/dev.sh",
-    "clean": "lerna clean",
+    "clean": "./scripts/clean.sh",
     "lint": "eslint packages/**/*.js",
     "up": "./scripts.up.sh",
     "migrate:make": "eval $(egrep -v '^#' .env | xargs) knex migrate:make --",

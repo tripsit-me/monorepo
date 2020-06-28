@@ -9,7 +9,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - tripsit_db_data:/var/lib/postgresql/data
+      - psql_data:/var/lib/postgresql/data
 
   web:
     container_name: tripsit_web
@@ -37,6 +37,6 @@ services:
       - ./packages/chat/volume:/var/opt/thelounge
 
 volumes:
-  tripsit_db_data:
-    name: tripsit-db
+  psql_data:
+    name: tripsit_db_data
     driver: local
