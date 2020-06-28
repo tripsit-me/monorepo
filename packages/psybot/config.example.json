@@ -6,7 +6,7 @@
 	"recoveryEmail": "psybot@example.com",
 	"channels": ["#general", "#help"],
 	"db": {
-		"user": "psybot",
+		"user": "tripsit",
 		"password": "P@ssw0rd",
 		"database": "tripsit"
 	}
