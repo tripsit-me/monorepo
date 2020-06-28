@@ -1,0 +1,20 @@
+lanugage: node_js
+services:
+  - docker
+cache: npm
+branches:
+  only:
+    - master
+    - development
+env:
+  - DOCKER_COMPOSE_VERSION=1.25.5
+before_install:
+  - ./scripts/ci/before_install.sh
+install:
+  - npm i
+  - npx lerna bootstrap
+  - docker-compose pull
+  - docker-compose build
+script:
+  - docker-compose up -d
+  - npm t

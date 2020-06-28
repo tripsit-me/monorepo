@@ -5,6 +5,7 @@ function bootstrap() {
 		echo "Bootstrapping project..."
 		npm i
 		npx lerna bootstrap
-		docker-compose build
 	fi
+	docker-compose pull
+	docker-compose build
 }

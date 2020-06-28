@@ -2,15 +2,17 @@
   "name": "@tripsit/root",
   "private": true,
   "scripts": {
-    "start": "WORKSPACE_ENV=production scripts/start.sh",
-    "dev": "WORKSPACE_ENV=development scripts/dev.sh",
-    "clean": "lerna clean",
-    "lint": "eslint packages/**/*.js",
+    "start": "WORKSPACE_ENV=production ./scripts/start.sh",
+		"dev": "WORKSPACE_ENV=development ./scripts/dev.sh",
+		"clean": "./scripts/clean.sh",
+		"clean:db": "source ./scripts/source/docker-clean.sh && docker_clean",
+    "lint": "eslint ./packages/**/*.js",
     "up": "./scripts.up.sh",
-    "migrate:make": "eval $(egrep -v '^#' .env | xargs) knex migrate:make --",
-    "migrate:latest": "eval $(egrep -v '^#' .env | xargs) knex migrate:latest",
-    "migrate:rollback": "eval $(egrep -v '^#' .env | xargs) knex migrate:rollback",
-    "migrate:reset": "./scripts/reset-db.sh"
+    "migrate:make": "npm run dev && knex migrate:make --",
+    "migrate:latest": "npm run env && knex migrate:latest",
+    "migrate:rollback": "npm run env && knex migrate:rollback",
+		"migrate:reset": "./scripts/reset-db.sh",
+		"env": "eval $(egrep -v '^#' .env | xargs)"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
