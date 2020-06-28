@@ -1,11 +1,16 @@
 'use strict';
 
 const { Client } = require('irc-framework');
+const knex = require('knex');
+const knexConfig = require('../knexfile');
+const createLogger = require('./logger');
 const middleware = require('./middleware');
 const commands = require('./commands');
 
 module.exports = function createPsybot(config) {
+	const logger = createLogger();
 	const client = new Client({ encoding: 'utf8' });
+	const db = knex(knexConfig);
 
 	if (process.env.DEBUG === 'true') client.use(middleware.debug());
 	client.use(middleware.nickserv(config));
@@ -26,10 +31,13 @@ module.exports = function createPsybot(config) {
 			.slice(1)
 			.split(/\s+/g);
 
-		const command = commands[commandName];
-		return command
-			? command({ event }, ...args)
-			: event.reply(`There is no command by '${commandName}'`);
+		const command = async (...xs) => commands[commandName](...xs);
+		return !command
+			? event.reply(`There is no command by '${commandName}'`)
+			: command({ event, db, logger }, ...args).catch(ex => {
+				logger.error(ex);
+				return Promise.reject(ex);
+			});
 	});
 
 	client.connect({

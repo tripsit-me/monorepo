@@ -6,16 +6,23 @@
   "main": "src/index.js",
   "scripts": {
     "start": "NODE_ENV=production node index.js",
-    "dev": "NODE_ENV=development nodemon --inspect index.js",
+    "dev": "NODE_ENV=development nodemon -i '**/__tests__/*' --inspect index.js",
     "test": "NODE_ENV=test jest"
   },
   "author": "SevenCats",
   "license": "MIT",
   "dependencies": {
-    "irc-framework": "^4.8.1"
+    "convert-units": "^2.3.4",
+    "irc-framework": "^4.8.1",
+    "knex": "^0.21.1",
+    "knex-stringcase": "^1.4.1",
+    "luxon": "^1.24.1",
+    "pg": "^8.2.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "jest": "^26.0.1",
+    "jest": "^26.1.0",
+    "jest-date-mock": "^1.0.8",
     "nodemon": "^2.0.4"
   }
 }

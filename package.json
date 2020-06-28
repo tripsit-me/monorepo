@@ -6,18 +6,29 @@
     "dev": "WORKSPACE_ENV=development scripts/dev.sh",
     "clean": "lerna clean",
     "lint": "eslint packages/**/*.js",
-    "up": "./scripts.up.sh"
+    "up": "./scripts.up.sh",
+    "migrate:make": "eval $(egrep -v '^#' .env | xargs) knex migrate:make --",
+    "migrate:latest": "eval $(egrep -v '^#' .env | xargs) knex migrate:latest",
+    "migrate:rollback": "eval $(egrep -v '^#' .env | xargs) knex migrate:rollback",
+    "migrate:reset": "./scripts/reset-db.sh"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.3",
     "babel-eslint": "^10.1.0",
     "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.2",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.17.1",
     "glob": "^7.1.6",
-    "lerna": "^3.22.0"
+    "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fake-tag": "^2.0.0",
+    "knex": "^0.21.1",
+    "knex-stringcase": "^1.4.1",
+    "pg": "^8.2.1"
   }
 }

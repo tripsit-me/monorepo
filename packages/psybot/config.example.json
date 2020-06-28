@@ -4,5 +4,10 @@
 	"nick": "PsyBot-default-config",
 	"password": "P@ssw0rd",
 	"recoveryEmail": "psybot@example.com",
-	"channels": ["#general", "#help"]
+	"channels": ["#general", "#help"],
+	"db": {
+		"user": "psybot",
+		"password": "P@ssw0rd",
+		"database": "tripsit"
+	}
 }

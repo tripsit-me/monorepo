@@ -1,5 +1,15 @@
-version: '3.8'
+version: '3.7'
 services:
+
+  db:
+    build: ./postgres
+    container_name: tripsit_db
+    restart: always
+    env_file: .env
+    ports:
+      - 5432:5432
+    volumes:
+      - tripsit_db_data:/var/lib/postgresql/data
 
   web:
     container_name: tripsit_web
@@ -15,15 +25,6 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/conf.d:/etc/nginx/conf.d
 
-  psybot:
-    container_name: tripsit_psybot
-    build: ./packages/psybot
-    restart: always
-    ports:
-      - 7600:7600
-    volumes:
-      - ./packages/psybot
-
   chat:
     container_name: tripsit_chat
     build: ./packages/chat
@@ -34,3 +35,8 @@ services:
       tripsit.local: 127.0.0.1
     volumes:
       - ./packages/chat/volume:/var/opt/thelounge
+
+volumes:
+  tripsit_db_data:
+    name: tripsit-db
+    driver: local

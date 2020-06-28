@@ -1,3 +1,3 @@
 'use strict';
 
-exports.ping = require('./ping');
+exports.idose = require('./idose');

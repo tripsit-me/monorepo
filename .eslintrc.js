@@ -19,6 +19,7 @@ module.exports = {
 		'no-tabs': 0,
 		'arrow-parens': [2, 'as-needed'],
 		'no-console': 0,
+		'func-names': 0,
 	},
 	overrides: [
 		{
