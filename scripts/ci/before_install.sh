@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+echo "Copying environmnt variables"
+cp .env.staging .env
+cp packages/psybot/config.staging.json packages/psybot/config.json
+
 echo "Updating npm..."
-npm -g i npm@6.14.5 >> /dev/null
+npm -g i npm@6.14.5
 
 echo "Update Docker..."
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
