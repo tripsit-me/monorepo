@@ -4,7 +4,6 @@
   "scripts": {
     "start": "WORKSPACE_ENV=production ./scripts/start.sh",
 		"dev": "WORKSPACE_ENV=development ./scripts/dev.sh",
-		"build": "lerna run build",
 		"clean": "./scripts/clean.sh",
 		"clean:db": "source ./scripts/source/docker-clean.sh && docker_clean",
     "lint": "eslint ./packages/**/*.js",
