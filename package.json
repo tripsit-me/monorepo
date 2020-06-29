@@ -2,19 +2,35 @@
   "name": "@tripsit/root",
   "private": true,
   "scripts": {
-    "start": "WORKSPACE_ENV=production lerna run start",
-    "dev": "WORKSPACE_ENV=development lerna run dev",
-    "clean": "lerna clean",
-    "lint": "eslint packages/**/*.js",
-    "up": "./scripts.up.sh"
+    "start": "WORKSPACE_ENV=production ./scripts/start.sh",
+		"dev": "WORKSPACE_ENV=development ./scripts/dev.sh",
+		"clean": "./scripts/clean.sh",
+		"clean:db": "source ./scripts/source/docker-clean.sh && docker_clean",
+    "lint": "eslint ./packages/**/*.js",
+    "up": "./scripts.up.sh",
+    "migrate:make": "npm run dev && knex migrate:make --",
+    "migrate:latest": "npm run env && knex migrate:latest",
+    "migrate:rollback": "npm run env && knex migrate:rollback",
+		"migrate:reset": "./scripts/reset-db.sh",
+		"env": "eval $(egrep -v '^#' .env | xargs)"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.3",
     "babel-eslint": "^10.1.0",
     "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.2",
-    "lerna": "^3.22.0"
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.17.1",
+    "glob": "^7.1.6",
+    "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fake-tag": "^2.0.0",
+    "knex": "^0.21.1",
+    "knex-stringcase": "^1.4.1",
+    "pg": "^8.2.1"
   }
 }

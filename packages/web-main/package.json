@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production npm run clean && concurrently \"npm run pug\" \"npm run sass:prod\" \"npm run js:prod\"",
     "dev": "NODE_ENV=development npm run clean && concurrently \"npm run pug -- -w\" \"npm run sass:prod\" \"npm run js:dev\"",
-    "pug": "pug -o docroot templates/*.pug",
+    "pug": "node ./compile-templates.js",
     "sass:dev": "node-sass -w --source-map true styles/index.scss > docroot/styles.css",
     "sass:prod": "node-sass --out-style compressed --source-map true styles/index.scss > docroot/styles.css",
     "js:dev": "webpack --env=development",
@@ -17,9 +17,9 @@
   "author": "SevenCats",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@babel/core": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
-    "autoprefixer": "^9.8.0",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "autoprefixer": "^9.8.4",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.2.0",
     "jstransformer-markdown-it": "^2.1.0",
@@ -27,7 +27,8 @@
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
+    "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "dependencies": {}
 }

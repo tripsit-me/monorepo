@@ -1,12 +1,4 @@
-mixin link(text, url, title = false, isBaseUrl = false)
-	-
-		const isCurrent = isBaseUrl
-			? new RegExp(`^${url}`).test(pageUrl)
-			: pageUrl === url;
-	a(href=url,
-		title=title,
-		aria-current=(isCurrent && 'page'),
-	) #{text}
+include ../../mixins/link-current
 
 header.main-header
 	nav.main-nav(aria-label='Main Navigation')

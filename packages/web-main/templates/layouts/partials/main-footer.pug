@@ -1,0 +1,13 @@
+include ../../mixins/link-current
+
+footer.main-footer
+	nav.footer-nav(aria-label='Main Navigation')
+		ul
+			li
+				a(href='/chat', target='_blank') Chat &amp; Assistance
+			li
+				a(href='//combo.tripsit.me/', target='_blank') Drug Combinations
+			li
+				a(href='//drugs.tripsit.me/', taget='_blank') Drug Factsheets
+			li
+				+link-current('Contact Us', '/contact-us')

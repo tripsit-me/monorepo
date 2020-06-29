@@ -1,0 +1,13 @@
+{
+	"host": "example.com",
+	"port": 6667,
+	"nick": "PsyBot-default-config",
+	"password": "P@ssw0rd",
+	"recoveryEmail": "psybot@example.com",
+	"channels": ["#general", "#help"],
+	"db": {
+		"user": "tripsit",
+		"password": "P@ssw0rd",
+		"database": "tripsit"
+	}
+}

@@ -1,0 +1,9 @@
+mixin link-current(text, url, title = false, isBaseUrl = false)
+	-
+		const isCurrent = isBaseUrl
+			? new RegExp(`^${url}`).test(pageUrl)
+			: pageUrl === url;
+	a(href=url,
+		title=title,
+		aria-current=(isCurrent && 'page'),
+	) #{text}
