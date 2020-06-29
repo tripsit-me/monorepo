@@ -1,7 +1,7 @@
 'use strict';
 
 const dateMock = require('jest-date-mock');
-const idose = require('../idose');
+const idose = require('../dose');
 
 jest.mock('../traits/with-user');
 jest.mock('../../../config', () => ({ nick: 'PsyBot-test-config' }));
