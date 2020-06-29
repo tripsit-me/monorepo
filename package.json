@@ -2,10 +2,11 @@
   "name": "@tripsit/root",
   "private": true,
   "scripts": {
-    "start": "WORKSPACE_ENV=production ./scripts/start.sh",
-		"dev": "WORKSPACE_ENV=development ./scripts/dev.sh",
+    "start": "./scripts/start.sh",
+		"dev": "./scripts/dev.sh",
+		"test": "npm run lint && lerna run test",
 		"clean": "./scripts/clean.sh",
-		"clean:db": "source ./scripts/source/docker-clean.sh && docker_clean",
+		"clean:docker": "source ./scripts/includes.sh && docker_clean",
     "lint": "eslint ./packages/**/*.js",
     "up": "./scripts.up.sh",
     "migrate:make": "npm run dev && knex migrate:make --",
@@ -13,6 +14,13 @@
     "migrate:rollback": "npm run env && knex migrate:rollback",
 		"migrate:reset": "./scripts/reset-db.sh",
 		"env": "eval $(egrep -v '^#' .env | xargs)"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fake-tag": "^2.0.0",
+    "knex": "^0.21.1",
+    "knex-stringcase": "^1.4.1",
+    "pg": "^8.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -25,12 +33,5 @@
     "eslint-plugin-jest": "^23.17.1",
     "glob": "^7.1.6",
     "lerna": "^3.22.1"
-  },
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "fake-tag": "^2.0.0",
-    "knex": "^0.21.1",
-    "knex-stringcase": "^1.4.1",
-    "pg": "^8.2.1"
   }
 }

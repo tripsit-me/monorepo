@@ -40,8 +40,8 @@ test('Dose argument is required', async () => {
 });
 
 test('Successful input without timeOffset', async () => {
-	const now = new Date('2020-01-01');
-	dateMock.advanceTo(now);
+	const date = new Date('2020-01-01');
+	dateMock.advanceTo(date);
 	const event = {
 		reply: jest.fn(),
 		target: 'PsyBot-test-config',
@@ -53,18 +53,18 @@ test('Successful input without timeOffset', async () => {
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'amphetamine',
-		dosedAt: now,
+		dosedAt: date,
 		userId: 'mockUserId',
 		milligrams: 15,
 	});
 	expect(event.reply).toHaveBeenCalledTimes(1);
 	expect(event.reply).toHaveBeenCalledWith('MrTibbleNickle dosed 15mg of amphetamine at '
-		+ `${now.toLocaleString()}`);
+		+ `${date.toLocaleString()}`);
 });
 
 test('Successful input with timeOffset', async () => {
-	const now = new Date('2020-01-01');
-	dateMock.advanceTo(now);
+	const date = new Date('2020-01-01');
+	dateMock.advanceTo(date);
 	const event = {
 		reply: jest.fn(),
 		target: 'PsyBot-test-config',
@@ -76,18 +76,18 @@ test('Successful input with timeOffset', async () => {
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'hamburgers',
-		dosedAt: new Date(now - 3.6e+6), // Subtract 1h
+		dosedAt: new Date(date - 3.6e+6), // Subtract 1h
 		userId: 'mockUserId',
 		milligrams: 15,
 	});
 	expect(event.reply).toHaveBeenCalledTimes(1);
 	expect(event.reply).toHaveBeenCalledWith('DankSwaggins dosed 15mg of hamburgers at '
-		+ `${new Date(now - 3.6e+6).toLocaleString()}`);
+		+ `${new Date(date - 3.6e+6).toLocaleString()}`);
 });
 
 test('Converts dose to mg for DB call', async () => {
-	const now = new Date('2020-01-01');
-	dateMock.advanceTo(now);
+	const date = new Date('2020-01-01');
+	dateMock.advanceTo(date);
 	const event = {
 		reply: jest.fn(),
 		target: 'PsyBot-test-config',
@@ -99,18 +99,18 @@ test('Converts dose to mg for DB call', async () => {
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'phenibut',
-		dosedAt: now,
+		dosedAt: date,
 		userId: 'mockUserId',
 		milligrams: 5000,
 	});
 	expect(event.reply).toHaveBeenCalledTimes(1);
 	expect(event.reply).toHaveBeenCalledWith('MrTibbleNickle dosed 5g of phenibut at '
-		+ `${now.toLocaleString()}`);
+		+ `${date.toLocaleString()}`);
 });
 
 test('Uses all remaining args for substance name', async () => {
-	const now = new Date('2020-01-01');
-	dateMock.advanceTo(now);
+	const date = new Date('2020-01-01');
+	dateMock.advanceTo(date);
 	const event = {
 		reply: jest.fn(),
 		target: 'PsyBot-test-config',
@@ -122,11 +122,11 @@ test('Uses all remaining args for substance name', async () => {
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'pickle of strength',
-		dosedAt: new Date(now - 3.6e+6), // Subtract 1h
+		dosedAt: new Date(date - 3.6e+6), // Subtract 1h
 		userId: 'mockUserId',
 		milligrams: 15,
 	});
 	expect(event.reply).toHaveBeenCalledTimes(1);
 	expect(event.reply).toHaveBeenCalledWith('DankSwaggins dosed 15mg of pickle of strength at '
-		+ `${new Date(now - 3.6e+6).toLocaleString()}`);
+		+ `${new Date(date - 3.6e+6).toLocaleString()}`);
 });

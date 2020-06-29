@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-
-base_path="$(dirname "$0")/.."
-
-source "$base_path/scripts/source/bootstrap.sh"
+source "$(dirname "$0")/include.sh"
 
 echo "Removing docker containers and volumes..."
 docker stop $(docker ps -qf name=tripsit)
@@ -16,4 +13,4 @@ npm i
 
 echo "Installing node modules..."
 bootstrap
-docker-compose up -d db
+docker-compose up -d
