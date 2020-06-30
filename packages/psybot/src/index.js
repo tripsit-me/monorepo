@@ -35,5 +35,5 @@ module.exports = function createPsybot(config) {
 		nick: config.nick,
 	});
 
-	return client;
+	return { client, middleware };
 };

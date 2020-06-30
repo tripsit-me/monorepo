@@ -17,11 +17,11 @@ test('If nick is not registered, register it', () => {
 				nick: 'NickServ',
 				message: 'SwagMaster9000 is not a registered nickname.',
 			},
-		},
-		{
-			nick: 'SwagMaster9000',
-			password: 'hunter2',
-			recoveryEmail: 'trains@example.com',
+			config: {
+				nick: 'SwagMaster9000',
+				password: 'hunter2',
+				recoveryEmail: 'trains@example.com',
+			},
 		},
 	);
 	expect(client.say).toHaveBeenCalledTimes(1);
@@ -37,11 +37,11 @@ test('Identify when displaye host is resolve', () => {
 				nick: 'SwagMaster9001',
 				password: 'findyourpeace',
 			},
-		},
-		{
-			nick: 'SwagMaster9001',
-			password: 'findyourpeace',
-			recoveryEmail: 'trains@example.com',
+			config: {
+				nick: 'SwagMaster9001',
+				password: 'findyourpeace',
+				recoveryEmail: 'trains@example.com',
+			},
 		},
 	);
 	expect(client.say).toHaveBeenCalledTimes(1);
