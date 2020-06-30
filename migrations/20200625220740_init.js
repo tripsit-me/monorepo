@@ -22,7 +22,7 @@ exports.up = async function (knex) {
 		builder.fk('user_id', 'users');
 		table.text('substance').notNullable();
 		table
-			.datetime('dosed_at')
+			.timestamp('dosed_at')
 			.notNullable()
 			.defaultTo(knex.fn.now());
 		table.float('milligrams');
