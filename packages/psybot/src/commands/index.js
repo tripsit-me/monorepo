@@ -1,3 +1,4 @@
 'use strict';
 
-exports.idose = require('./idose');
+exports.dose = require('./dose');
+exports.lastdose = require('./lastdose');

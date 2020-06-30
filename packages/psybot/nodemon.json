@@ -1,0 +1,14 @@
+{
+	"watch": false,
+	"verbose": false,
+	"env": {
+		"NODE_ENV": "development"
+	},
+	"ignore": [
+		"**/__tests__",
+		"**/__mocks__"
+	],
+	"execMap": {
+		"js": "node --inspect"
+	}
+}

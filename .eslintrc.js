@@ -20,6 +20,7 @@ module.exports = {
 		'arrow-parens': [2, 'as-needed'],
 		'no-console': 0,
 		'func-names': 0,
+		'consistent-return': 0,
 	},
 	overrides: [
 		{
