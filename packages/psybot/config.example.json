@@ -5,6 +5,7 @@
 	"password": "P@ssw0rd",
 	"recoveryEmail": "psybot@example.com",
 	"channels": ["#general", "#help"],
+	"commandPrefix": "!",
 	"db": {
 		"user": "tripsit",
 		"password": "P@ssw0rd",

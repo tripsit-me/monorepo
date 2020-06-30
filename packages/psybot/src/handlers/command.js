@@ -6,9 +6,10 @@ module.exports = function commandHandler({
 	event,
 	db,
 	logger,
+	config,
 	...deps
 }) {
-	if (!event.message.trim().startsWith('!')) return null;
+	if (!event.message.trim().startsWith(config.commandPrefix)) return null;
 	const [commandName, ...args] = event.message
 		.trim()
 		.slice(1)
@@ -16,7 +17,7 @@ module.exports = function commandHandler({
 
 	const command = commands[commandName] && (async (...xs) => commands[commandName](...xs));
 	return !command
-		? event.reply(`There is no command by '${commandName}'`)
+		? event.reply(`There is no command by '${commandName}'.`)
 		: command({
 			event,
 			db,
