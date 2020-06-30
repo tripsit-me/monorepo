@@ -2,7 +2,6 @@
 
 const { Client } = require('irc-framework');
 const createPsybot = require('..');
-const middleware = require('../middleware');
 
 jest.mock('irc-framework', () => {
 	class MockClient {}
@@ -16,7 +15,7 @@ jest.mock('irc-framework', () => {
 	return { Client: MockClient };
 });
 
-jest.mock('../middleware', () => ({
+jest.mock('../middleware', () => jest.fn().mockReturnValue({
 	debug: jest.fn(),
 	nickserv: jest.fn(),
 }));
@@ -31,20 +30,20 @@ afterEach(() => {
 });
 
 test('Does not apply the debug middleware if process.env.DEBUG is not "true"', () => {
-	expect(createPsybot({
+	const { client, middleware } = createPsybot({
 		host: 'mockHost',
 		port: 1337,
 		nick: 'RadMan1337',
 		channels: [],
-	}))
-		.toBeInstanceOf(Client);
+	});
+	expect(client).toBeInstanceOf(Client);
 	expect(middleware.debug).not.toHaveBeenCalled();
 	expect(middleware.nickserv).toHaveBeenCalled();
 });
 
 test('Applies middleware if process.env.DEBUG is "true"', () => {
 	process.env.DEBUG = 'true';
-	createPsybot({
+	const { middleware } = createPsybot({
 		host: 'mockHost',
 		port: 1337,
 		nick: 'RadMan1337',
@@ -54,7 +53,7 @@ test('Applies middleware if process.env.DEBUG is "true"', () => {
 });
 
 test('Joins all channels defined in configuration', () => {
-	const client = createPsybot({
+	const { client } = createPsybot({
 		host: 'mockHost',
 		port: 1337,
 		nick: 'RadMan1337',

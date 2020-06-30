@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
 		"start": "npx thelounge start",
-		"dev": "npx thelounge start"
+		"dev": "npx thelounge start",
+		"test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "SevenCats",
   "license": "MIT"
