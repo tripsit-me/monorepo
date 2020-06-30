@@ -29,4 +29,4 @@ async function lastdoseCommand({ event, db, user }, dosesBackArg) {
 	}
 }
 
-module.exports = compose(withUser, withPmOnly)(lastdoseCommand);
+module.exports = compose(withPmOnly, withUser)(lastdoseCommand);

@@ -9,7 +9,7 @@
 		"clean:docker": "source ./scripts/includes.sh && docker_clean",
     "lint": "eslint ./packages/**/*.js",
     "up": "./scripts.up.sh",
-    "migrate:make": "npm run dev && knex migrate:make --",
+    "migrate:make": "npm run env && knex migrate:make --",
     "migrate:latest": "npm run env && knex migrate:latest",
     "migrate:rollback": "npm run env && knex migrate:rollback",
 		"migrate:reset": "./scripts/reset-db.sh",

@@ -5,6 +5,7 @@
 	"password": "ke$ha4",
 	"recoveryEmail": "snowcolton@hotmail.com",
 	"channels": ["#tripsit-dev"],
+	"commandPrefix": "!",
 	"db": {
 		"user": "psybot",
 		"password": "P@ssw0rd",

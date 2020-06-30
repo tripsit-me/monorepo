@@ -12,7 +12,7 @@
     "js:dev": "webpack --env=development",
     "js:prod": "webpack --env=production",
     "clean": "rm -rf docroot/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "SevenCats",
   "license": "BSD-3-Clause",

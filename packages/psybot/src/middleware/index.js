@@ -3,18 +3,15 @@
 const debug = require('./debug');
 const nickserv = require('./nickserv');
 
-function createMiddleware(fn) {
+function applyMiddleware(fn, deps) {
 	return (...args) => (middlewareClient, rawEvents, parsedEvents) => {
-		parsedEvents.use(async (cmd, event, client, next) => {
-			await fn({
-				event,
-				client,
-				command: cmd,
-			}, ...args);
-			next();
-		});
+		parsedEvents.use(
+			async (command, event, client, next) => next(await fn({ event, command, ...deps }, ...args)),
+		);
 	};
 }
 
-module.exports = Object.fromEntries(Object.entries({ debug, nickserv })
-	.map(([k, v]) => [k, createMiddleware(v)]));
+module.exports = function createMiddleware(deps) {
+	return Object.fromEntries(Object.entries({ debug, nickserv })
+		.map(([k, v]) => [k, applyMiddleware(v, deps)]));
+};
