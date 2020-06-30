@@ -5,14 +5,9 @@ const nickserv = require('./nickserv');
 
 function createMiddleware(fn) {
 	return (...args) => (middlewareClient, rawEvents, parsedEvents) => {
-		parsedEvents.use(async (cmd, event, client, next) => {
-			await fn({
-				event,
-				client,
-				command: cmd,
-			}, ...args);
-			next();
-		});
+		parsedEvents.use(
+			async (command, event, client, next) => next(await fn({ event, client, command }, ...args)),
+		);
 	};
 }
 
