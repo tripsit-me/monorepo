@@ -6,13 +6,22 @@ const withUser = require('./traits/with-user');
 const withPmOnly = require('./traits/with-pm-only');
 const {	compose, parseUnitArg } = require('../util');
 
-async function lastDose({ event, db, user }, dosesBack = 0) {
-	const dose = await db('doses')
+async function lastDose({ event, db, user }, dosesBack) {
+	if (dosesBack !== undefined) {
+		if (dosesBack < 0) event.reply('Must use a positive number.');
+		else if (!Number.isNaN(dosesBack) || !Number.isInteger(dosesBack)) {
+			event.reply('Must be an integer.');
+		}
+	}
+
+	const query = db('doses')
 		.select('substance', 'dosed_at', 'milligrams')
 		.where('user_id', user.id)
-		.orderBy('dosed_at', 'desc')
-		.limit(1)
-		.offset(dosesBack);
+		.orderBy('dosed_at', 'desc');
+
+	const dose = await (dosesBack > 0
+		? query.limit(1).offset(dosesBack).then(([a]) => a)
+		: query.first());
 
 	if (!dose) event.reply('There are no recorded doses for this user.');
 	else {

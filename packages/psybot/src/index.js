@@ -31,7 +31,7 @@ module.exports = function createPsybot(config) {
 			.slice(1)
 			.split(/\s+/g);
 
-		const command = async (...xs) => commands[commandName](...xs);
+		const command = commands[commandName] && (async (...xs) => commands[commandName](...xs));
 		return !command
 			? event.reply(`There is no command by '${commandName}'`)
 			: command({	event, db, logger }, ...args).catch(ex => {
