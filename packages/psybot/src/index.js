@@ -4,7 +4,7 @@ const { Client } = require('irc-framework');
 const knex = require('knex');
 const knexConfig = require('../knexfile');
 const createLogger = require('./logger');
-const middleware = require('./middleware');
+const createMiddleware = require('./middleware');
 const createHandlers = require('./handlers');
 
 module.exports = function createPsybot(config) {
@@ -19,8 +19,9 @@ module.exports = function createPsybot(config) {
 	};
 
 	// Apply middleware
-	if (process.env.DEBUG === 'true') client.use(middleware.debug(deps));
-	client.use(middleware.nickserv(deps));
+	const middleware = createMiddleware(deps);
+	if (process.env.DEBUG === 'true') client.use(middleware.debug());
+	client.use(middleware.nickserv());
 
 	// Apply event handlers
 	const handlers = createHandlers(deps);

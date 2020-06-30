@@ -6,6 +6,7 @@ module.exports = function nickservMiddleware({
 	command,
 	event,
 }) {
+	console.log(config);
 	const isNotRegistered = command === 'message'
 		&& event.nick.toLowerCase() === 'nickserv'
 		&& event.message.endsWith('is not a registered nickname.');
