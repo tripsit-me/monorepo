@@ -6,71 +6,42 @@ const withUser = require('./traits/with-user');
 const withPmOnly = require('./traits/with-pm-only');
 const {	compose, parseUnitArg } = require('../util');
 
-async function lastDose({ event, db, user }, dosesBack) {
-	if (dosesBack !== undefined) {
-		if (dosesBack < 0) event.reply('Must use a positive number.');
-		else if (!Number.isNaN(dosesBack) || !Number.isInteger(dosesBack)) {
-			event.reply('Must be an integer.');
+function withArgs(fn) {
+	return async (deps, ...args) => {
+		// Determine how long ago the dose was taken defaulting to now
+		const timeOffset = parseUnitArg(args[args.length - 1], 'time');
+		const remainingArgs = timeOffset ? args.slice(0, -1) : args;
+
+		// Determine dose
+		const dose = parseUnitArg(args[0], 'mass');
+		if (!dose) {
+			return deps.event.reply('Please provide a dosage for the substance. '
+				+ 'Run !help idose for additional assistance.');
 		}
-	}
 
-	const query = db('doses')
-		.select('substance', 'dosed_at', 'milligrams')
-		.where('user_id', user.id)
-		.orderBy('dosed_at', 'desc');
-
-	const dose = await (dosesBack > 0
-		? query.limit(1).offset(dosesBack).then(([a]) => a)
-		: query.first());
-
-	if (!dose) event.reply('There are no recorded doses for this user.');
-	else {
-		event.reply(`${user.nick} dosed ${dose.milligrams}mg of ${dose.substance} `
-			+ `at ${dose.dosedAt.toLocaleString()}`);
-	}
+		// The remaining args define the substance used
+		const substance = remainingArgs.slice(1).join(' ');
+		return fn(deps, substance, dose, timeOffset);
+	};
 }
 
-async function addDose({ event, db, user }, substance, dose, timeOffset) {
-	if (substance === 'last') lastDose({ event, db, user });
-	else {
-		const dosedAt = DateTime
-			.utc()
-			.minus(timeOffset ? convertUnits(timeOffset.value).from(timeOffset.unit).to('ms') : 0)
-			.toJSDate();
+async function doseCommand({ event, db, user }, substance, dose, timeOffset) {
+	const dosedAt = DateTime
+		.utc()
+		.minus(timeOffset ? convertUnits(timeOffset.value).from(timeOffset.unit).to('ms') : 0)
+		.toJSDate();
 
-		await db('doses').insert({
-			substance,
-			dosedAt,
-			userId: user.id,
-			milligrams: convertUnits(dose.value)
-				.from(dose.unit)
-				.to('mg'),
-		});
+	await db('doses').insert({
+		substance,
+		dosedAt,
+		userId: user.id,
+		milligrams: convertUnits(dose.value)
+			.from(dose.unit)
+			.to('mg'),
+	});
 
-		event.reply(`${event.nick} dosed ${dose.value}${dose.unit} of ${substance}`
-			+ ` at ${dosedAt.toLocaleString()}`);
-	}
+	event.reply(`${event.nick} dosed ${dose.value}${dose.unit} of ${substance}`
+		+ ` at ${dosedAt.toLocaleString()}`);
 }
 
-async function doseCommand(deps, ...args) {
-	// Last dose
-	if ((args.length === 1 || args.length === 2) && args[0] === 'last') {
-		return lastDose(deps, args[1]);
-	}
-
-	// Add dose
-	// Determine how long ago the dose was taken defaulting to now
-	const timeOffset = parseUnitArg(args[args.length - 1], 'time');
-	const remainingArgs = timeOffset ? args.slice(0, -1) : args;
-
-	// Determine dose
-	const dose = parseUnitArg(args[0], 'mass');
-	if (!dose) {
-		return deps.event.reply('Please provide a dosage for the substance. '
-			+ 'Run !help idose for additional assistance.');
-	}
-	const substance = remainingArgs.slice(1).join(' ');
-	return addDose(deps, substance, dose, timeOffset);
-}
-
-module.exports = compose(withPmOnly, withUser)(doseCommand);
+module.exports = compose(withPmOnly, withUser, withArgs)(doseCommand);

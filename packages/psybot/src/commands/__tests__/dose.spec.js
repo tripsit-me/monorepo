@@ -1,17 +1,19 @@
 'use strict';
 
 const dateMock = require('jest-date-mock');
-const idose = require('../dose');
+const dose = require('../dose');
 
 jest.mock('../traits/with-user');
 jest.mock('../../../config', () => ({ nick: 'PsyBot-test-config' }));
 
-const insert = jest.fn();
-const db = jest.fn().mockReturnValue({ insert });
+let db;
+let insert;
 
 beforeEach(() => {
 	jest.clearAllMocks();
 	dateMock.clear();
+	insert = jest.fn();
+	db = jest.fn().mockReturnValue({ insert });
 });
 
 test('Can only be used over PM', async () => {
@@ -20,8 +22,7 @@ test('Can only be used over PM', async () => {
 		target: '#foo',
 		nick: 'MrTibbleNickle',
 	};
-	await idose({ event, db }, 'amphetamine', '5mg', null);
-	expect(db).not.toHaveBeenCalled();
+	await expect(dose({ event }, 'amphetamine', '5mg', null)).toBe(undefined);
 	expect(event.reply).toHaveBeenCalledWith('This command is only available through PM');
 	expect(event.reply).toHaveBeenCalledTimes(1);
 });
@@ -32,7 +33,7 @@ test('Dose argument is required', async () => {
 		target: 'PsyBot-test-config',
 		nick: 'MrTibbleNickle',
 	};
-	await idose({ event, db }, 'amphetamine');
+	await expect(dose({ event, db }, 'amphetamine')).resolves.toBe(undefined);
 	expect(db).not.toHaveBeenCalled();
 	expect(event.reply).toHaveBeenCalledWith('Please provide a dosage for the substance. '
 		+ 'Run !help idose for additional assistance.');
@@ -49,7 +50,7 @@ test('Successful input without timeOffset', async () => {
 	};
 	const user = { id: 'mockUserId' };
 
-	await idose({ event, db, user }, '15mg', 'amphetamine');
+	await expect(dose({ event, db, user }, '15mg', 'amphetamine')).resolves.toBe(undefined);
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'amphetamine',
@@ -72,7 +73,7 @@ test('Successful input with timeOffset', async () => {
 	};
 	const user = { id: 'mockUserId' };
 
-	await idose({ event, db, user }, '15mg', 'hamburgers', '1h');
+	await expect(dose({ event, db, user }, '15mg', 'hamburgers', '1h')).resolves.toBe(undefined);
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'hamburgers',
@@ -95,7 +96,7 @@ test('Converts dose to mg for DB call', async () => {
 	};
 	const user = { id: 'mockUserId' };
 
-	await idose({ event, db, user }, '5g', 'phenibut');
+	await expect(dose({ event, db, user }, '5g', 'phenibut')).resolves.toBe(undefined);
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'phenibut',
@@ -118,7 +119,8 @@ test('Uses all remaining args for substance name', async () => {
 	};
 	const user = { id: 'mockUserId' };
 
-	await idose({ event, db, user }, '15mg', 'pickle', 'of', 'strength', '1h');
+	await expect(dose({ event, db, user }, '15mg', 'pickle', 'of', 'strength', '1h')).resolves
+		.toBe(undefined);
 	expect(db).toHaveBeenCalled();
 	expect(insert).toHaveBeenCalledWith({
 		substance: 'pickle of strength',
