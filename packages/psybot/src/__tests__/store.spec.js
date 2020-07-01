@@ -2,11 +2,13 @@
 
 const createStore = require('../store');
 
-test('addChannels', () => {
-	const { state, addChannels } = createStore();
-	expect(state.channels).toEqual([]);
-	expect(addChannels('a')).toBe(undefined);
-	expect(state.channels).toEqual(['a']);
-	expect(addChannels(['b', 'c'])).toBe(undefined);
-	expect(state.channels).toEqual(['a', 'b', 'c']);
+test('Can add and get channels', () => {
+	const store = createStore();
+	expect(store.addChannels([
+		{ name: '#a' },
+		{ name: '#b' },
+		{ name: '#c' },
+	]))
+		.toBe(undefined);
+	expect(store.getChannel('#b')).toEqual({ name: '#b' });
 });
