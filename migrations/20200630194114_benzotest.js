@@ -3,7 +3,7 @@
 const { createTableBuilder } = require('../migration-utils');
 
 exports.up = async function (knex) {
-	return knex.schema.createTable('blackout_test', table => {
+	return knex.schema.createTable('blackout_tests', table => {
 		const builder = createTableBuilder(knex, table);
 		builder.pk();
 		builder.fk('user_id', 'users');
@@ -27,5 +27,5 @@ exports.up = async function (knex) {
 };
 
 exports.down = async function (knex) {
-	return knex.schema.dropTableIfExists('blackout_test');
+	return knex.schema.dropTableIfExists('blackout_tests');
 };
