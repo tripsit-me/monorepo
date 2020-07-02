@@ -21,3 +21,9 @@ exports.parseUnitArg = function (unitArg, unitType) {
 		? null
 		: { value, unit };
 };
+
+exports.isUserOnline = async function (client, nick) {
+	return new Promise(resolve => {
+		client.whois(nick, resolve);
+	});
+};

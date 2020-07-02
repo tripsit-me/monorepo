@@ -8,17 +8,16 @@ const createStore = require('./store');
 const createMiddleware = require('./middleware');
 const createHandlers = require('./handlers');
 
-module.exports = function createPsybot(config) {
+module.exports = async function createPsybot(config) {
 	const logger = createLogger();
 	const client = new Client({ encoding: 'utf8' });
 	const db = knex(knexConfig);
-	const store = createStore({ client, db, logger });
 	const deps = {
 		config,
 		logger,
 		client,
 		db,
-		store,
+		store: await createStore({ client, db, logger }),
 	};
 
 	// Apply middleware
