@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-
 set -e
-export base_path="$(dirname "$0")/.."
 
+export base_path="$(dirname "$0")/.."
 source "$base_path/scripts/source/bootstrap.sh"
 source "$base_path/scripts/source/containerctl.sh"
 

@@ -22,8 +22,6 @@ services:
       tripsit.local: 127.0.0.1
     volumes:
       - ./packages/web-main/docroot:/usr/share/nginx/tripsit_web
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf.d:/etc/nginx/conf.d
 
   chat:
     container_name: tripsit_chat

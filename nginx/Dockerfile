@@ -10,3 +10,6 @@ RUN openssl req \
 	-newkey rsa:2048 \
 	-keyout "/etc/ssl/private/nginx-tripsit.key" \
 	-out "/etc/ssl/certs/nginx-tripsit.crt"
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY conf.d /etc/nginx
