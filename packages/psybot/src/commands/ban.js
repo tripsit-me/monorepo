@@ -8,7 +8,9 @@ const { compose, parseUnitArg } = require('../util');
 function withArgs(fn) {
 	return async (deps, durationArg, userToBan, ...reasonArgs) => {
 		const { event, client } = deps;
-		const whois = promisify(client.whois);
+		// const whois = promisify(client.whois);
+
+		event.reply('foo');
 
 		if (!durationArg) {
 			event.reply('Must provide a duration for the banned user. Zero for perma-ban.');
@@ -20,16 +22,13 @@ function withArgs(fn) {
 			return null;
 		}
 
-		return fn({
-			duration,
-			reason: reasonArgs.join(' '),
-			user: await whois(userToBan),
-		});
+		return fn(deps, duration, client.whois(userToBan), reasonArgs.join(' '));
 	};
 }
 
-async function banCommand(...args) {
-	console.log(...args);
+async function banCommand({ event, db, user }, duration, userToBan, reason) {
+	console.log(userToBan);
+	event.reply('this is a test');
 }
 
 module.exports = compose(
