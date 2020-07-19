@@ -2,7 +2,7 @@
 
 const { promisify } = require('util');
 const withUser = require('./traits/with-user');
-const withModeratorPermission = require('./traits/with-moderator-permission');
+const createWithPermissions = require('./traits/with-permissions');
 const { compose, parseUnitArg } = require('../util');
 
 function withArgs(fn) {
@@ -28,8 +28,12 @@ function withArgs(fn) {
 	};
 }
 
-async function banCommand({ event, db, user, client }, durationArg, userToBan, ...reasonArgs) {
-
+async function banCommand(...args) {
+	console.log(...args);
 }
 
-module.exports = compose(withUser, withModeratorPermission, withArgs)(banCommand);
+module.exports = compose(
+	withUser,
+	createWithPermissions(['moderator', 'operator']),
+	withArgs,
+)(banCommand);
