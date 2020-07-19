@@ -2,6 +2,7 @@
 
 const debug = require('./debug');
 const nickserv = require('./nickserv');
+const log = require('./log');
 
 function applyMiddleware(fn, deps) {
 	return (...args) => (middlewareClient, rawEvents, parsedEvents) => {
@@ -12,6 +13,6 @@ function applyMiddleware(fn, deps) {
 }
 
 module.exports = function createMiddleware(deps) {
-	return Object.fromEntries(Object.entries({ debug, nickserv })
+	return Object.fromEntries(Object.entries({ debug, nickserv, log })
 		.map(([k, v]) => [k, applyMiddleware(v, deps)]));
 };

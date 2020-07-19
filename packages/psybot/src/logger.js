@@ -5,7 +5,7 @@ const winston = require('winston');
 const config = require('../config');
 
 module.exports = function createLogger() {
-	const baseLogPath = path.resolve('../../logs/psybot');
+	const baseLogPath = path.resolve('logs/system');
 
 	const logger = winston.createLogger({
 		logger: 'info',

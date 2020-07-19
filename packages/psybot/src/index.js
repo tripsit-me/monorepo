@@ -21,6 +21,7 @@ module.exports = function createPsybot(config) {
 	// Apply middleware
 	const middleware = createMiddleware(deps);
 	if (process.env.DEBUG === 'true') client.use(middleware.debug());
+	client.use(middleware.log());
 	client.use(middleware.nickserv());
 
 	// Apply event handlers
