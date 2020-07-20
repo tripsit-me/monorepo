@@ -24,8 +24,8 @@ exports.up = async function (knex) {
 		knex.schema.createTable('bans', table => {
 			const builder = createTableBuilder(knex, table);
 			builder.pk();
-			table.fk('banned_user_id', 'users');
-			table.fk('enacted_by', 'users');
+			builder.fk('banned_user_id', 'users');
+			builder.fk('enacted_by', 'users');
 			table.datetime('expires');
 			table.text('reason').notNullable();
 			table.timestamps(true, true);
