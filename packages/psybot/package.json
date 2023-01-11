@@ -14,7 +14,7 @@
   "dependencies": {
     "convert-units": "^2.3.4",
     "irc-framework": "^4.8.1",
-    "knex": "^0.21.1",
+    "knex": "^2.4.0",
     "knex-stringcase": "^1.4.1",
     "luxon": "^1.24.1",
     "pg": "^8.2.1",
