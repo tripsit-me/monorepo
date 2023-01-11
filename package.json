@@ -18,7 +18,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "fake-tag": "^2.0.0",
-    "knex": "^0.21.1",
+    "knex": "^2.4.0",
     "knex-stringcase": "^1.4.1",
     "pg": "^8.2.1"
   },
